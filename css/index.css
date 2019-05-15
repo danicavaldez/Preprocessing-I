@@ -144,6 +144,11 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 500px) {
+  .nav {
+    justify-content: center;
+  }
+}
 .nav a {
   text-decoration: none;
   color: black;
@@ -154,6 +159,14 @@ body {
   padding: 20px;
   margin-top: 20px;
   background-color: #E9B8B1;
+}
+@media (max-width: 500px) {
+  .bio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
 }
 .bio img {
   width: 15rem;
@@ -166,7 +179,7 @@ body {
 .bio h3 {
   font-size: 1.5rem;
   padding-bottom: 10px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #dddddd;
 }
 .bio p {
   padding-top: 10px;
@@ -176,25 +189,48 @@ section {
   justify-content: space-between;
   margin: 20px 0;
 }
+@media (max-width: 500px) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+}
 section div {
   width: 45%;
+  border: 1px solid #E9B8B1;
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  section div {
+    width: 100%;
+    border: none;
+  }
 }
 section div h2 {
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: underline;
 }
+@media (max-width: 500px) {
+  section div {
+    text-align: center;
+  }
+}
 section div p {
   padding-top: 10px;
   line-height: 15px;
 }
+@media (max-width: 500px) {
+  section div p {
+    padding: 15px 0;
+  }
+}
 section .skills {
+  border-top: 1px solid #E9B8B1;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-section .skills ul li {
-  padding: 10px 0;
+  justify-content: space-between;
 }
 .work-history h2 {
   font-size: 1.8rem;
@@ -215,5 +251,21 @@ section .skills ul li {
   border: 1px solid #dddddd;
 }
 .work-history table tr:nth-child(even) {
+  background-color: #E9B8B1;
+}
+footer .contact h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+footer .contact p {
+  line-height: 1.5rem;
+}
+footer .copyright {
+  margin-top: 10px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 5px;
   background-color: #E9B8B1;
 }
