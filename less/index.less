@@ -96,6 +96,13 @@ html, body {
 	}
 }
 
+a:hover {
+	color: @main-color;
+	background-color: @gray-border;
+	padding: 2px 7px;
+	transition: 0.5s;
+}
+
 .bio {
 	padding: 20px;
 	margin-top: 20px;
@@ -133,6 +140,13 @@ section {
 	.section-content;
 	margin: 20px 0;
 
+	.skills {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between
+	}
+
 	@media(max-width: 500px) {
 		display: flex;
 		flex-direction: column;
@@ -151,35 +165,29 @@ section {
 
 		h2 {
 			.subheader;
-			}
 			
 			@media( max-width: 500px) {
 				text-align: center;
+				padding-bottom: 10px;
 			}	
 
-		p {
+		.about p {
 			padding-top: 10px;
-			line-height: 15px;
-
-			@media( max-width: 500px) {
-				padding: 15px 0;
+			line-height: 30px;
 			}
 		}
 	}
-
-	.skills {
-		border-top: 1px solid @main-color;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between
-	}
 }
+
 
 .work-history {
 	h2 {
 		.subheader;
 		margin-bottom: 10px;
+
+		@media (max-width: 500px) {
+			text-align: center;
+		}
 	}
 
 	table {
@@ -210,6 +218,10 @@ footer {
 
 		p {
 			line-height: 1.5rem;
+		}
+
+		@media (max-width: 500px) {
+			text-align: center;
 		}
 	}
 

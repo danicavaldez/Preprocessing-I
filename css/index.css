@@ -155,6 +155,12 @@ body {
   font-size: 1.8rem;
   margin-left: 1rem;
 }
+a:hover {
+  color: #E9B8B1;
+  background-color: #dddddd;
+  padding: 2px 7px;
+  transition: 0.5s;
+}
 .bio {
   padding: 20px;
   margin-top: 20px;
@@ -189,6 +195,12 @@ section {
   justify-content: space-between;
   margin: 20px 0;
 }
+section .skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 @media (max-width: 500px) {
   section {
     display: flex;
@@ -212,31 +224,25 @@ section div h2 {
   text-decoration: underline;
 }
 @media (max-width: 500px) {
-  section div {
+  section div h2 {
     text-align: center;
+    padding-bottom: 10px;
   }
 }
-section div p {
+section div h2 .about p {
   padding-top: 10px;
-  line-height: 15px;
-}
-@media (max-width: 500px) {
-  section div p {
-    padding: 15px 0;
-  }
-}
-section .skills {
-  border-top: 1px solid #E9B8B1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  line-height: 30px;
 }
 .work-history h2 {
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: underline;
   margin-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .work-history h2 {
+    text-align: center;
+  }
 }
 .work-history table {
   margin-bottom: 20px;
@@ -261,6 +267,11 @@ footer .contact h2 {
 }
 footer .contact p {
   line-height: 1.5rem;
+}
+@media (max-width: 500px) {
+  footer .contact {
+    text-align: center;
+  }
 }
 footer .copyright {
   margin-top: 10px;
