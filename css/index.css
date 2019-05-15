@@ -195,6 +195,9 @@ section {
   justify-content: space-between;
   margin: 20px 0;
 }
+section .about h2 {
+  margin-bottom: 10px;
+}
 section .skills {
   display: flex;
   flex-direction: column;
@@ -226,12 +229,8 @@ section div h2 {
 @media (max-width: 500px) {
   section div h2 {
     text-align: center;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
-}
-section div h2 .about p {
-  padding-top: 10px;
-  line-height: 30px;
 }
 .work-history h2 {
   font-size: 1.8rem;
