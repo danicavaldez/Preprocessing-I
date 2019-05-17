@@ -53,7 +53,183 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+//variables//
+@raleway: 'Raleway', sans-serif;
+@main-color: #E9B8B1;
+@gray-border: #dddddd;
+
+//mixins//
+.section-content() {
+	display: flex;
+	justify-content: space-between;
 }
 
+.subheader() {
+	font-size: 1.8rem;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+html, body {
+		height: 100%;
+		font-size: 62.5%;
+		margin: 10px 2rem;
+		font-family: @raleway
+}
+.home {
+	font-size: 1.6rem;
+}
+
+.nav {
+	display: flex;
+	justify-content: flex-end;
+
+	@media( max-width: 500px) {
+	justify-content: center;
+	}	
+
+	a {
+		text-decoration: none;
+		color: black;
+		font-size: 1.8rem;
+		margin-left: 1rem;
+	}
+}
+
+a:hover {
+	color: @main-color;
+	background-color: @gray-border;
+	padding: 2px 7px;
+	transition: 0.5s;
+}
+
+.bio {
+	padding: 20px;
+	margin-top: 20px;
+	background-color: @main-color;
+
+	@media( max-width: 500px) {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	}	
+	
+	img {
+		width: 15rem;
+		padding-bottom: 10px;
+		border-radius: 50%;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+		padding-bottom: 10px;
+		border-bottom: 1px solid @gray-border;
+	}
+
+	p {
+		padding-top: 10px;
+	}
+}
+
+section {
+	.about {
+		h2 {
+			margin-bottom: 10px;
+		}
+	}
+	.section-content;
+	margin: 20px 0;
+
+	.skills {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between
+	}
+
+	@media(max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	div {
+		width: 45%;
+		border: 1px solid @main-color;
+		padding: 10px;
+
+
+		@media( max-width: 500px) {
+			width: 100%;
+			border: none;
+		}
+
+		h2 {
+			.subheader;
+			
+			@media( max-width: 500px) {
+				text-align: center;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+
+.work-history {
+	h2 {
+		.subheader;
+		margin-bottom: 10px;
+
+		@media (max-width: 500px) {
+			text-align: center;
+		}
+	}
+
+	table {
+		margin-bottom: 20px;
+
+		th {
+			font-weight: bold;
+		}
+
+		td, th {
+			text-align: left;
+			padding: 8px;
+			border: 1px solid @gray-border;
+		}
+			
+		tr:nth-child(even) {
+			background-color: @main-color;
+		}
+	}
+}
+
+footer {
+	.contact {
+		h2 {
+			.subheader;
+			margin-bottom: 10px;
+		}
+
+		p {
+			line-height: 1.5rem;
+		}
+
+		@media (max-width: 500px) {
+			text-align: center;
+		}
+	}
+
+	.copyright {
+		margin-top: 10px;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 5px;
+		background-color: @main-color;
+	}
+}
